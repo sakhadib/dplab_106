@@ -13,8 +13,15 @@ public class Rider {
         this.rating = rating;
     }
 
+    public Rider(int id, String name, String location){
+        this.id = id;
+        this.name = name;
+        this.location = location;
+    }
+
+
     public void requestRide(){
-        System.out.println("Ride Requested!");
+        System.out.println("Requesting A Trip!");
     }
 
     public void rateDriver(){

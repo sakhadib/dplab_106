@@ -29,6 +29,6 @@ public class Trip {
     }
 
     private void assignDriver(){
-        DriverManager.AssignDriver();
+        this.driver = DriverManager.AssignDriver();
     }
 }
