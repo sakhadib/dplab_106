@@ -1,6 +1,7 @@
 package Application;
 
 import Factory.PaymentFactory;
+import Factory.RatingFactory;
 import Factory.TripFactory;
 
 public class Rider {
@@ -33,7 +34,9 @@ public class Rider {
     }
 
     public void rateDriver(){
-        System.out.println("Driver Rated!");
+        double rating = RatingFactory.createDriverRating();
+        System.out.println("Driver Rated Successfully! Rating: " + rating + "/5");
+        System.out.println("Thanks for the trip!");
     }
 
     public void makePayment(){

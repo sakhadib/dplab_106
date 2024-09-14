@@ -12,6 +12,7 @@ public class PaymentFactory {
         System.out.println("1. Card");
         System.out.println("2. PayPal");
         System.out.println("3. Wallet");
+        System.out.println("4. Cash");
 
         int choice = scanner.nextInt();
 
@@ -44,6 +45,11 @@ public class PaymentFactory {
                 int cryptoOTP = scanner.nextInt();
 
                 return new WalletPayment(walletNumber, cryptoOTP);
+
+            case 4:
+                return new CashPayment();
+
+
 
             default:
                 System.out.println("Invalid Choice");

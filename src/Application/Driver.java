@@ -1,5 +1,7 @@
 package Application;
 
+import Factory.RatingFactory;
+
 public class Driver {
     public int id;
     public String name;
@@ -19,11 +21,13 @@ public class Driver {
 
     public void acceptRide(){
         System.out.println("Ride Accepted! by Driver: " + this.name);
+        startTrip();
     }
 
     public void rateRider(){
-        System.out.println("Rider Rated!");
-        startTrip();
+        double rating = RatingFactory.createRiderRating();
+        System.out.println("Rider Rated Successfully! Rating: " + rating + "/5");
+
     }
 
     public void updateLocation(String location) {

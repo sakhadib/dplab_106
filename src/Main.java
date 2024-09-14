@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the Ridoo App!");
 
-        System.out.println("\n\nRegister Yourself as a Rider:");
+        System.out.println("\nRegister Yourself as a Rider:");
         Rider rider = RiderFactory.crateRider();
 
 
@@ -16,6 +16,7 @@ public class Main {
         rider.makePayment();
 
         rider.rateDriver();
+        currentTrip.driver.rateRider();
 
     }
 }
