@@ -20,6 +20,7 @@ public class Driver {
     }
 
     public void acceptRide(){
+        Application.DemoSleep.sleep(2);
         System.out.println("Ride Accepted! by Driver: " + this.name);
         startTrip();
     }

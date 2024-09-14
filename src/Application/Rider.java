@@ -4,6 +4,8 @@ import Factory.PaymentFactory;
 import Factory.RatingFactory;
 import Factory.TripFactory;
 
+import Payment.Payment;
+
 public class Rider {
     public int id;
     public String name;
@@ -27,8 +29,11 @@ public class Rider {
     public Trip requestRide(){
         System.out.println("Requesting A Trip!");
         Trip trip = TripFactory.createTrip();
-        System.out.println("Trip Requested!");
+        Application.DemoSleep.sleep(2);
+        System.out.println("Trip Requested! Assigning Driver...");
+        Application.DemoSleep.sleep(3);
         trip.assignDriver();
+        Application.DemoSleep.sleep(1);
         System.out.println("Driver Assigned! Driver Name: " + trip.driver.name);
         return trip;
     }
@@ -40,8 +45,11 @@ public class Rider {
     }
 
     public void makePayment(){
-        PaymentFactory.createPayment();
-        System.out.println("Payment Made Successfully!");
+        Payment payment = PaymentFactory.createPayment();
+        Application.DemoSleep.sleep(2);
+        System.out.println("Processing Payment...");
+        Application.DemoSleep.sleep(3);
+        payment.pay();
     }
 
 }

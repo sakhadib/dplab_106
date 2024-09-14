@@ -16,6 +16,11 @@ public class PaymentFactory {
 
         int choice = scanner.nextInt();
 
+        if(choice < 1 || choice > 4){
+            System.out.println("Invalid Choice");
+            return createPayment();
+        }
+
         return paymentMethodSelector(choice);
     }
 

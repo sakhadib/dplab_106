@@ -6,12 +6,13 @@ public class Main {
 
         System.out.println("\nRegister Yourself as a Rider:");
         Rider rider = RiderFactory.crateRider();
-
+        System.out.println("Rider Registered!");
 
         Trip currentTrip = rider.requestRide();
 
         currentTrip.driver.acceptRide();
         System.out.println("Trip Running...");
+        Application.DemoSleep.sleep(5);
         currentTrip.driver.endTrip();
         rider.makePayment();
 
