@@ -1,3 +1,5 @@
+package Application;
+
 public class Rider {
     public int id;
     public String name;
@@ -16,7 +18,7 @@ public class Rider {
     }
 
     public void rateDriver(){
-        System.out.println("Driver Rated!");
+        System.out.println("Application.Driver Rated!");
     }
 
     public void makePayment(){

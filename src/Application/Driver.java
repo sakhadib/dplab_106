@@ -1,3 +1,5 @@
+package Application;
+
 public class Driver {
     public int id;
     public String name;
@@ -16,11 +18,11 @@ public class Driver {
     }
 
     public void acceptRide(){
-        System.out.println("Ride Accepted! by Driver: " + this.name);
+        System.out.println("Ride Accepted! by Application.Driver: " + this.name);
     }
 
     public void rateRider(){
-        System.out.println("Rider Rated!");
+        System.out.println("Application.Rider Rated!");
     }
 
     public void updateLocation(String location) {
@@ -30,11 +32,11 @@ public class Driver {
 
     public void startTrip(){
         this.availability = false;
-        System.out.println("Trip Started!");
+        System.out.println("Application.Trip Started!");
     }
 
     public void endTrip(){
         this.availability = true;
-        System.out.println("Trip Ended!");
+        System.out.println("Application.Trip Ended!");
     }
 }
