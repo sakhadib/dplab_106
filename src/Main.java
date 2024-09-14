@@ -7,6 +7,11 @@ public class Main {
         System.out.println("\n\nRegister Yourself as a Rider:");
         Rider rider = RiderFactory.crateRider();
 
-        rider.requestRide();
+
+        Trip currentTrip = rider.requestRide();
+
+        currentTrip.driver.acceptRide();
+
+
     }
 }

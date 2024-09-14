@@ -28,7 +28,7 @@ public class Trip {
         this.fare = rideType.calculateFare();
     }
 
-    private void assignDriver(){
+    public void assignDriver(){
         this.driver = DriverManager.AssignDriver();
     }
 }

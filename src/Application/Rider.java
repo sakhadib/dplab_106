@@ -1,5 +1,7 @@
 package Application;
 
+import Factory.TripFactory;
+
 public class Rider {
     public int id;
     public String name;
@@ -20,8 +22,17 @@ public class Rider {
     }
 
 
-    public void requestRide(){
+    public Trip requestRide(){
         System.out.println("Requesting A Trip!");
+        Trip trip = TripFactory.createTrip();
+        System.out.println("Trip Requested!");
+        trip.assignDriver();
+        System.out.println("Driver Assigned! Driver Name: " + trip.driver.name);
+        return trip;
+    }
+
+    public void startTrip(){
+        System.out.println("Trip Started!");
     }
 
     public void rateDriver(){

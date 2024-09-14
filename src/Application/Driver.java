@@ -23,6 +23,7 @@ public class Driver {
 
     public void rateRider(){
         System.out.println("Application.Rider Rated!");
+        startTrip();
     }
 
     public void updateLocation(String location) {
