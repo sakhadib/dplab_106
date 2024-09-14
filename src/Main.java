@@ -11,7 +11,11 @@ public class Main {
         Trip currentTrip = rider.requestRide();
 
         currentTrip.driver.acceptRide();
+        System.out.println("Trip Running...");
+        currentTrip.driver.endTrip();
+        rider.makePayment();
 
+        rider.rateDriver();
 
     }
 }

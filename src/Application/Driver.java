@@ -18,11 +18,11 @@ public class Driver {
     }
 
     public void acceptRide(){
-        System.out.println("Ride Accepted! by Application.Driver: " + this.name);
+        System.out.println("Ride Accepted! by Driver: " + this.name);
     }
 
     public void rateRider(){
-        System.out.println("Application.Rider Rated!");
+        System.out.println("Rider Rated!");
         startTrip();
     }
 
@@ -33,11 +33,11 @@ public class Driver {
 
     public void startTrip(){
         this.availability = false;
-        System.out.println("Application.Trip Started!");
+        System.out.println("Trip Started!");
     }
 
     public void endTrip(){
         this.availability = true;
-        System.out.println("Application.Trip Ended!");
+        System.out.println("Trip Ended!");
     }
 }

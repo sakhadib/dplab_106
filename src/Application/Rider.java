@@ -1,5 +1,6 @@
 package Application;
 
+import Factory.PaymentFactory;
 import Factory.TripFactory;
 
 public class Rider {
@@ -31,16 +32,13 @@ public class Rider {
         return trip;
     }
 
-    public void startTrip(){
-        System.out.println("Trip Started!");
-    }
-
     public void rateDriver(){
-        System.out.println("Application.Driver Rated!");
+        System.out.println("Driver Rated!");
     }
 
     public void makePayment(){
-        System.out.println("Payment Made!");
+        PaymentFactory.createPayment();
+        System.out.println("Payment Made Successfully!");
     }
 
 }
