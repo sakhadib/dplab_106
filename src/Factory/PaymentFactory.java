@@ -1,5 +1,6 @@
 package Factory;
 
+import Application.Rider;
 import Payment.*;
 
 import java.util.Scanner;
@@ -8,13 +9,21 @@ public class PaymentFactory {
 
     public static Payment createPayment(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Select Payment Method: ");
+
         System.out.println("1. Card");
         System.out.println("2. PayPal");
         System.out.println("3. Wallet");
         System.out.println("4. Cash");
 
-        int choice = scanner.nextInt();
+        int choice;
+
+        try{
+            choice = scanner.nextInt();
+        }
+        catch (Exception e){
+            System.out.println("Invalid Choice");
+            return createPayment();
+        }
 
         if(choice < 1 || choice > 4){
             System.out.println("Invalid Choice");
@@ -59,6 +68,23 @@ public class PaymentFactory {
             default:
                 System.out.println("Invalid Choice");
                 return null;
+        }
+    }
+
+    public static Payment secondChoice(Rider rider){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you want to use your preferred payment method?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+
+        int choice = scanner.nextInt();
+
+        if(choice == 1){
+            return rider.preferedMethod;
+
+        }
+        else{
+            return createPayment();
         }
     }
 }

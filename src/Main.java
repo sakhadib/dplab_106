@@ -1,5 +1,7 @@
 import Factory.*;
 import Application.*;
+
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the Ridoo App!");
@@ -12,9 +14,9 @@ public class Main {
 
         currentTrip.driver.acceptRide();
         System.out.println("Trip Running...");
-        Application.DemoSleep.sleep(5);
+        Application.DemoSleep.sleep(2);
         currentTrip.driver.endTrip();
-        rider.makePayment();
+        rider.makePayment(currentTrip.fare);
 
         rider.rateDriver();
         currentTrip.driver.rateRider();

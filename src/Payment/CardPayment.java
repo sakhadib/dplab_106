@@ -11,7 +11,7 @@ public class CardPayment implements Payment {
     }
 
     @Override
-    public void pay() {
-        System.out.println("Paid Through Card!");
+    public void pay(double amount) {
+        System.out.println("Paid " + amount +" Through Card! Card Number: " + cardNumber + " Card Holder Name: " + cardHolderName);
     }
 }

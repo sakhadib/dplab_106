@@ -10,7 +10,7 @@ public class WalletPayment implements Payment{
         this.otp = otp;
     }
     @Override
-    public void pay() {
-        System.out.println("Paid Through Digital Wallet!");
+    public void pay(double amount) {
+        System.out.println("Paid " + amount +" Through Digital Wallet! Wallet ID: " + walletId + " OTP: " + otp);
     }
 }

@@ -11,7 +11,7 @@ public class PaypalPayment implements Payment{
     }
 
     @Override
-    public void pay() {
-        System.out.println("Paid Through Paypal!");
+    public void pay(double amount) {
+        System.out.println("Paid " + amount +" Through Paypal! Email: " + email + " OTP: " + otp);
     }
 }
