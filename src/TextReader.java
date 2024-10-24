@@ -20,11 +20,5 @@ public class TextReader {
         }
     }
 
-    public static void main(String[] args) {
-        // Example usage
-        String filePath = "example.txt";  // Replace with your file path
-        String fileContent = readFromTextFile(filePath);
-        System.out.println(fileContent);
-    }
 }
 
